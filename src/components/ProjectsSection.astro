@@ -1,0 +1,213 @@
+---
+const projects = [
+  {
+    id: "projects.kostapp",
+    num: "01",
+    label: "Property",
+    title: "E-Commerce KostApp",
+    description:
+      "Sebuah Apps berbasis app full system integration dengan laravel khusus penjualan property (Kost Apartement atau hotel) yang bekerja sama dengan PT Multi Raksa Tribata",
+    tags: ["Laravel", "E-Commerce", "Property"],
+    image: "/kostapp.png",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: "projects.edufo",
+    num: "02",
+    label: "Education",
+    title: "Edufo CRM",
+    description: "sebuah crm untuk pemesanan Aplikasi pendidikan with label",
+    tags: ["CRM", "Education", "Laravel"],
+    image: "/edufo.png",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: "projects.siakad",
+    num: "03",
+    label: "Academic",
+    title: "Siakad SMK Nurul Islam",
+    description:
+      "sebuah sistem akademik lengkap dengan 4 pilar yaitu Siakad Tracer Study, Siakad PKL, Siakad Inventaris dan Siakad Jobseeker untuk SMK Nurul Islam Jakarta Full Integration Web Apps Laravel and python",
+    tags: ["Laravel", "Python", "SIAKAD"],
+    image:
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1000",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    id: "projects.kasis",
+    num: "04",
+    label: "Management",
+    title: "Kasis App",
+    description:
+      "Sebuah Aplikasi Multiplatform (Windows, Android dan Web) pencatatan Manajemen kas dan pencatatan pelanggaran bekerja sama dengan OSIS SMK Nurul Islam Jakarta dibuat full integration web dengan mobile apps dengan teknologi flutter",
+    tags: ["Flutter", "Cross-Platform", "Management"],
+    image: "/kasis.png",
+    liveUrl: "#",
+    githubUrl: "#",
+  },
+];
+---
+
+<section
+  id="projects"
+  class="py-24 relative overflow-hidden notranslate bg-[#050505] text-white min-h-screen flex flex-col justify-center"
+>
+  {/* Abstract Background */}
+  <div class="absolute inset-0 pointer-events-none opacity-20">
+    <div
+      class="absolute top-[10%] left-[20%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px]"
+    >
+    </div>
+    <div
+      class="absolute bottom-[10%] right-[20%] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px]"
+    >
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-12 relative animate-fade-in-up">
+      <h2
+        class="text-4xl md:text-5xl font-black mb-4 tracking-tight text-white"
+        data-i18n="projects.title"
+      >
+        Featured <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300"
+          >Work</span
+        >
+      </h2>
+    </div>
+
+    {/* Accordion Container */}
+    <div
+      class="flex flex-col md:flex-row gap-2 h-[600px] w-full max-w-7xl mx-auto items-stretch select-none"
+    >
+      {
+        projects.map((project, index) => (
+          <div
+            class={`accordion-item relative overflow-hidden rounded-3xl transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] cursor-pointer group ${index === 0 ? "active flex-[4]" : "flex-[0.5]"}`}
+            data-index={index}
+            role="button"
+          >
+            {/* Background Image with Overlay */}
+            <div class="absolute inset-0 z-0">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10 opacity-60 group-[.active]:opacity-40 group-hover:opacity-50 transition-opacity duration-500" />
+              <img
+                src={project.image}
+                alt={project.title}
+                class="w-full h-full object-cover grayscale group-[.active]:grayscale-0 group-hover:grayscale-[0.5] transition-all duration-700 transform scale-110 group-[.active]:scale-100 group-hover:scale-105"
+              />
+            </div>
+
+            {/* Collapsed State Content (Vertical Text) */}
+            <div class="absolute inset-0 z-20 flex flex-col items-center justify-between py-10 opacity-100 group-[.active]:opacity-0 transition-opacity duration-500 delay-0 group-[.active]:delay-0 pointer-events-none group-[.active]:pointer-events-none">
+              <span class="text-2xl font-black text-white/30">
+                {project.num}
+              </span>
+              <span class="text-4xl font-black text-white/50 tracking-widest uppercase writing-vertical-rl rotate-180 whitespace-nowrap">
+                {project.label}
+              </span>
+              <i class="fas fa-plus text-white/30" />
+            </div>
+
+            {/* Expanded State Content */}
+            <div class="absolute inset-0 z-20 p-8 md:p-12 flex flex-col justify-end opacity-0 group-[.active]:opacity-100 transition-all duration-500 delay-300 translate-y-4 group-[.active]:translate-y-0">
+              {/* Big Number Background */}
+              <div class="absolute top-4 right-8 text-[120px] font-black text-white/5 leading-none select-none font-outline-2">
+                {project.num}
+              </div>
+
+              <div class="relative z-10 max-w-xl">
+                <div class="flex items-center gap-4 mb-4">
+                  <span class="px-3 py-1 bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-bold uppercase tracking-widest rounded-full backdrop-blur-md">
+                    {project.label}
+                  </span>
+                  <div class="h-px flex-1 bg-white/20" />
+                </div>
+
+                <h3 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+                  {project.title}
+                </h3>
+
+                <p
+                  class="text-gray-300 text-lg mb-8 line-clamp-2"
+                  data-i18n={`${project.id}.desc`}
+                >
+                  {project.description}
+                </p>
+
+                <div class="flex flex-wrap gap-3 mb-8">
+                  {project.tags.map((tag) => (
+                    <span class="text-sm font-semibold text-white/60">
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div class="flex gap-4">
+                  <a
+                    href={project.liveUrl}
+                    class="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-blue-400 hover:text-white transition-colors duration-300"
+                  >
+                    View Project
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Border Highlight for Active State */}
+            <div class="absolute inset-0 border border-white/0 group-[.active]:border-white/10 rounded-3xl pointer-events-none transition-all duration-500" />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .writing-vertical-rl {
+    writing-mode: vertical-rl;
+  }
+  .font-outline-2 {
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Ensure only one item expands on mobile too if easier, or stick to flex col behavior */
+  @media (max-width: 768px) {
+    .accordion-item.active {
+      flex: 3;
+    }
+  }
+</style>
+
+<script>
+  const items = document.querySelectorAll(".accordion-item");
+  let isAnimating = false;
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      // Prevent glitching if user clicks rapidly or clicks the already active item
+      if (item.classList.contains("active") || isAnimating) return;
+
+      isAnimating = true;
+
+      // Remove active from any currently active item
+      const currentActive = document.querySelector(".accordion-item.active");
+      if (currentActive) {
+        currentActive.classList.remove("active", "flex-[4]");
+        currentActive.classList.add("flex-[0.5]");
+      }
+
+      // Activate clicked item
+      item.classList.remove("flex-[0.5]");
+      item.classList.add("active", "flex-[4]");
+
+      // Unlock after transition
+      setTimeout(() => {
+        isAnimating = false;
+      }, 500);
+    });
+  });
+</script>

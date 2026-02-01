@@ -1,0 +1,186 @@
+<section
+  id="skills"
+  class="py-24 relative overflow-hidden bg-white notranslate"
+>
+  {/* Background Decorative Element */}
+  <div
+    class="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-light/30 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 -z-10"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-0 w-1/4 h-1/4 bg-green-light/20 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2 -z-10"
+  >
+  </div>
+
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-20 relative">
+      <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tight text-dark">
+        Technical <span class="text-blue-primary">Mastery</span>
+      </h2>
+      <p
+        class="text-gray-text max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
+      >
+        Engineering excellence through a curated stack of modern technologies
+        and industry-standard tools.
+      </p>
+      <div class="w-16 h-1.5 bg-green-primary/40 mx-auto mt-8 rounded-full">
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+      {/* Frontend Mastery */}
+      <div
+        class="group bg-white rounded-[2.5rem] p-10 border border-blue-50 shadow-xl shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-700 hover:-translate-y-4 relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity"
+        >
+          <i class="fas fa-code text-9xl text-blue-primary"></i>
+        </div>
+        <div
+          class="w-16 h-16 rounded-2xl bg-blue-light/50 flex items-center justify-center mb-10 border border-blue-100 group-hover:bg-blue-primary group-hover:scale-110 transition-all duration-500"
+        >
+          <i
+            class="fas fa-code text-3xl text-blue-primary group-hover:text-white transition-colors"
+          ></i>
+        </div>
+        <h3 class="text-2xl font-black mb-8 text-dark tracking-tight">
+          Frontend Architecture
+        </h3>
+        <div class="space-y-7">
+          {
+            [
+              { name: "React / Next.js", level: "Advanced", width: "95%" },
+              { name: "Astro / Vite", level: "Expert", width: "90%" },
+              { name: "Tailwind CSS", level: "Expert", width: "98%" },
+              { name: "TypeScript", level: "Advanced", width: "88%" },
+            ].map((skill) => (
+              <div class="space-y-2">
+                <div class="flex items-center justify-between text-sm font-bold">
+                  <span class="text-dark uppercase tracking-wider">
+                    {skill.name}
+                  </span>
+                  <span class="text-blue-primary">{skill.level}</span>
+                </div>
+                <div class="h-1.5 w-full bg-blue-light rounded-full overflow-hidden">
+                  <div
+                    class="h-full bg-blue-primary rounded-full group-hover:bg-blue-secondary transition-all duration-1000"
+                    style={`width: ${skill.width}`}
+                  />
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      {/* Backend & Systems */}
+      <div
+        class="group bg-dark rounded-[2.5rem] p-10 shadow-2xl shadow-blue-900/20 transition-all duration-700 hover:-translate-y-4 relative overflow-hidden"
+      >
+        <div class="absolute top-0 right-0 p-8 opacity-10">
+          <i class="fas fa-server text-9xl text-white"></i>
+        </div>
+        <div
+          class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mb-10 border border-white/10 group-hover:bg-green-primary group-hover:scale-110 transition-all duration-500"
+        >
+          <i
+            class="fas fa-server text-3xl text-green-primary group-hover:text-white transition-colors"
+          ></i>
+        </div>
+        <h3 class="text-2xl font-black mb-8 text-white tracking-tight">
+          Backend & Infrastructure
+        </h3>
+        <div class="space-y-7">
+          {
+            [
+              { name: "Node.js / Go", level: "Advanced", width: "90%" },
+              { name: "PostgreSQL / Mongo", level: "Expert", width: "92%" },
+              { name: "Docker / K8s", level: "Advanced", width: "85%" },
+              { name: "API Security", level: "Expert", width: "95%" },
+            ].map((skill) => (
+              <div class="space-y-2">
+                <div class="flex items-center justify-between text-sm font-bold text-white/90">
+                  <span class="uppercase tracking-wider">{skill.name}</span>
+                  <span class="text-green-primary">{skill.level}</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div
+                    class="h-full bg-green-primary rounded-full group-hover:bg-green-secondary transition-all duration-1000"
+                    style={`width: ${skill.width}`}
+                  />
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      {/* Product & Design */}
+      <div
+        class="group bg-white rounded-[2.5rem] p-10 border border-blue-50 shadow-xl shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-700 hover:-translate-y-4 relative overflow-hidden"
+      >
+        <div
+          class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity"
+        >
+          <i class="fas fa-paint-brush text-9xl text-blue-primary"></i>
+        </div>
+        <div
+          class="w-16 h-16 rounded-2xl bg-blue-light flex items-center justify-center mb-10 border border-blue-100 group-hover:bg-blue-primary group-hover:scale-110 transition-all duration-500"
+        >
+          <i
+            class="fas fa-paint-brush text-3xl text-blue-primary group-hover:text-white transition-colors"
+          ></i>
+        </div>
+        <h3 class="text-2xl font-black mb-8 text-dark tracking-tight">
+          Product Engineering
+        </h3>
+        <div class="space-y-7">
+          {
+            [
+              { name: "UI/UX Architecture", level: "Creative", width: "94%" },
+              { name: "Server Infrastucture", level: "Expert", width: "98%" },
+              { name: "Agile Leadership", level: "Solid", width: "90%" },
+              { name: "Growth Strategy", level: "Strategic", width: "85%" },
+            ].map((skill) => (
+              <div class="space-y-2">
+                <div class="flex items-center justify-between text-sm font-bold">
+                  <span class="text-dark uppercase tracking-wider">
+                    {skill.name}
+                  </span>
+                  <span class="text-blue-primary">{skill.level}</span>
+                </div>
+                <div class="h-1.5 w-full bg-blue-light rounded-full overflow-hidden">
+                  <div
+                    class="h-full bg-blue-primary rounded-full group-hover:bg-blue-secondary transition-all duration-1000"
+                    style={`width: ${skill.width}`}
+                  />
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    {/* Professional Tools Ribbon */}
+    <div class="mt-20 flex flex-wrap justify-center gap-6">
+      {
+        [
+          "Git",
+          "CI/CD",
+          "AWS",
+          "Firebase",
+          "Redis",
+          "Kafka",
+          "Graphql",
+          "PWA",
+        ].map((tool) => (
+          <span class="px-8 py-3 bg-white border border-blue-50 rounded-2xl text-sm font-black text-gray-text shadow-sm hover:border-blue-primary hover:text-blue-primary hover:shadow-lg hover:-translate-y-1 transition-all cursor-default uppercase tracking-widest">
+            {tool}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</section>

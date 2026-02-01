@@ -1,0 +1,715 @@
+{/* Floating Navbar with Glassmorphism */}
+<header
+    id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 py-3 transition-all duration-500"
+>
+    <nav class="flex justify-center items-center gap-3 px-4">
+        <div
+            class="flex items-center gap-2 bg-white/80 backdrop-blur-xl rounded-lg px-4 py-2.5 shadow-lg border border-white/20 transition-all duration-300"
+            id="nav-container"
+        >
+            {/* Logo with Animation */}
+            <a
+                href="#home"
+                class="flex items-center space-x-3 group relative z-10"
+            >
+                <div
+                    class="h-8 w-1 bg-blue-400 rounded-full group-hover:h-10 transition-all duration-300"
+                >
+                </div>
+
+                <div class="flex flex-col justify-center">
+                    <span
+                        class="text-lg font-extrabold text-slate-900 leading-none tracking-tighter group-hover:text-blue-600 transition-colors duration-300"
+                    >
+                        Nafil<span
+                            class="text-blue-600 group-hover:text-slate-900 transition-colors duration-300"
+                        >
+                            .
+                        </span>Habibi
+                    </span>
+                    <span
+                        class="text-[9px] text-slate-400 font-bold tracking-[0.2em] uppercase mt-1 leading-none"
+                    >
+                        Fullstack Engineer
+                    </span>
+                </div>
+            </a>
+
+            {/* Desktop Navigation */}
+            <div class="hidden md:flex items-center gap-1">
+                <a
+                    href="#home"
+                    class="nav-link px-4 py-2 text-sm text-gray-700 hover:text-blue-primary font-semibold rounded-lg hover:bg-blue-light/50 transition-all duration-300 relative group"
+                >
+                    <span class="relative z-10">Home</span>
+                    <div
+                        class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-primary to-blue-secondary rounded-full group-hover:w-8 transition-all duration-300"
+                    >
+                    </div>
+                </a>
+                <a
+                    href="#about"
+                    class="nav-link px-4 py-2 text-sm text-gray-700 hover:text-blue-primary font-semibold rounded-lg hover:bg-blue-light/50 transition-all duration-300 relative group"
+                >
+                    <span class="relative z-10">About</span>
+                    <div
+                        class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-primary to-blue-secondary rounded-full group-hover:w-8 transition-all duration-300"
+                    >
+                    </div>
+                </a>
+                <a
+                    href="#projects"
+                    class="nav-link px-4 py-2 text-sm text-gray-700 hover:text-blue-primary font-semibold rounded-lg hover:bg-blue-light/50 transition-all duration-300 relative group"
+                >
+                    <span class="relative z-10">Projects</span>
+                    <div
+                        class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-primary to-blue-secondary rounded-full group-hover:w-8 transition-all duration-300"
+                    >
+                    </div>
+                </a>
+                <a
+                    href="#skills"
+                    class="nav-link px-4 py-2 text-sm text-gray-700 hover:text-blue-primary font-semibold rounded-lg hover:bg-blue-light/50 transition-all duration-300 relative group"
+                >
+                    <span class="relative z-10">Skills</span>
+                    <div
+                        class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-primary to-blue-secondary rounded-full group-hover:w-8 transition-all duration-300"
+                    >
+                    </div>
+                </a>
+                <a
+                    href="#contact"
+                    class="nav-link px-4 py-2 text-sm text-gray-700 hover:text-blue-primary font-semibold rounded-lg hover:bg-blue-light/50 transition-all duration-300 relative group"
+                >
+                    <span class="relative z-10">Contact</span>
+                    <div
+                        class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-primary to-blue-secondary rounded-full group-hover:w-8 transition-all duration-300"
+                    >
+                    </div>
+                </a>
+
+                {/* Language Switcher */}
+
+                {/* Divider - Hidden on smaller screens */}
+                <div class="w-px h-6 bg-gray-300 mx-1"></div>
+
+                {/* CTA Button */}
+                <a
+                    href="#contact"
+                    class="group relative px-5 py-2 text-sm bg-blue-primary text-white font-bold rounded-lg overflow-hidden shadow-md shadow-blue-900/10 hover:bg-blue-secondary transition-all duration-300 hover:-translate-y-0.5"
+                >
+                    <span class="relative z-10 flex items-center gap-2">
+                        Hire Me
+                        <i
+                            class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"
+                        ></i>
+                    </span>
+                    {/* Shine effect */}
+                    <div
+                        class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                    >
+                    </div>
+                </a>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+                id="mobile-menu-button"
+                class="md:hidden relative w-10 h-10 rounded-full bg-white shadow-md border border-blue-100 hover:bg-blue-50 transition-all duration-300 flex items-center justify-center group z-[70]"
+            >
+                <div class="relative w-5 h-4 flex flex-col justify-between">
+                    <span
+                        class="hamburger-line w-full h-0.5 bg-blue-primary rounded-full transition-all duration-300"
+                    ></span>
+                    <span
+                        class="hamburger-line w-full h-0.5 bg-blue-primary rounded-full transition-all duration-300"
+                    ></span>
+                    <span
+                        class="hamburger-line w-full h-0.5 bg-blue-primary rounded-full transition-all duration-300"
+                    ></span>
+                </div>
+            </button>
+        </div>
+
+        {
+            /* Language Switcher - Separate Floating Box (Visible on all screens) */
+        }
+        <div
+            class="flex items-center bg-white/80 backdrop-blur-xl rounded-lg p-1.5 shadow-lg border border-white/20 transition-all duration-300"
+            id="lang-container"
+        >
+            <button
+                id="lang-en"
+                class="px-3 py-1.5 text-[10px] font-black rounded-md transition-all duration-300 lang-btn active"
+                data-lang="en"
+            >
+                EN
+            </button>
+            <button
+                id="lang-id"
+                class="px-3 py-1.5 text-[10px] font-black rounded-md transition-all duration-300 lang-btn"
+                data-lang="id"
+            >
+                ID
+            </button>
+        </div>
+
+        {/* Mobile Navigation - Sidebar */}
+        <div
+            id="mobile-menu"
+            class="fixed top-0 right-0 h-screen w-[85%] max-w-sm bg-white shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out md:hidden z-[60] border-l border-blue-50"
+        >
+            {/* Mobile Menu Header */}
+            <div
+                class="flex items-center justify-between p-6 border-b border-gray-200"
+            >
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-blue-primary flex items-center justify-center shadow-lg shadow-blue-900/10"
+                    >
+                        <span class="text-white font-black text-lg">N</span>
+                    </div>
+                    <div>
+                        <div class="text-lg font-black text-dark">
+                            Nafil Habibi
+                        </div>
+                        <div class="text-xs text-gray-400 font-semibold">
+                            DEVELOPER
+                        </div>
+                    </div>
+                </div>
+                <button
+                    id="mobile-menu-close"
+                    class="w-10 h-10 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center"
+                >
+                    <i class="fas fa-times text-gray-600 text-xl"></i>
+                </button>
+            </div>
+
+            {/* Mobile Language Switcher - Removed (Moved to header) */}
+
+            {/* Mobile Menu Links */}
+            <div class="flex flex-col p-6 space-y-2">
+                <a
+                    href="#home"
+                    class="mobile-nav-link group flex items-center justify-between px-5 py-4 rounded-xl hover:bg-blue-light/50 transition-all duration-300"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-blue-light flex items-center justify-center group-hover:bg-blue-primary transition-colors"
+                        >
+                            <i
+                                class="fas fa-home text-blue-primary group-hover:text-white transition-colors"
+                            ></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 group-hover:text-blue-primary"
+                            >Home</span
+                        >
+                    </div>
+                    <i
+                        class="fas fa-chevron-right text-gray-400 group-hover:text-blue-primary group-hover:translate-x-1 transition-all"
+                    ></i>
+                </a>
+
+                <a
+                    href="#about"
+                    class="mobile-nav-link group flex items-center justify-between px-5 py-4 rounded-xl hover:bg-blue-light/50 transition-all duration-300"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-blue-light flex items-center justify-center group-hover:bg-blue-primary transition-colors"
+                        >
+                            <i
+                                class="fas fa-user text-blue-primary group-hover:text-white transition-colors"
+                            ></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 group-hover:text-blue-primary"
+                            >About</span
+                        >
+                    </div>
+                    <i
+                        class="fas fa-chevron-right text-gray-400 group-hover:text-blue-primary group-hover:translate-x-1 transition-all"
+                    ></i>
+                </a>
+
+                <a
+                    href="#projects"
+                    class="mobile-nav-link group flex items-center justify-between px-5 py-4 rounded-xl hover:bg-blue-light/50 transition-all duration-300"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-blue-light flex items-center justify-center group-hover:bg-blue-primary transition-colors"
+                        >
+                            <i
+                                class="fas fa-briefcase text-blue-primary group-hover:text-white transition-colors"
+                            ></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 group-hover:text-blue-primary"
+                            >Projects</span
+                        >
+                    </div>
+                    <i
+                        class="fas fa-chevron-right text-gray-400 group-hover:text-blue-primary group-hover:translate-x-1 transition-all"
+                    ></i>
+                </a>
+
+                <a
+                    href="#skills"
+                    class="mobile-nav-link group flex items-center justify-between px-5 py-4 rounded-xl hover:bg-blue-light/50 transition-all duration-300"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-blue-light flex items-center justify-center group-hover:bg-blue-primary transition-colors"
+                        >
+                            <i
+                                class="fas fa-code text-blue-primary group-hover:text-white transition-colors"
+                            ></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 group-hover:text-blue-primary"
+                            >Skills</span
+                        >
+                    </div>
+                    <i
+                        class="fas fa-chevron-right text-gray-400 group-hover:text-blue-primary group-hover:translate-x-1 transition-all"
+                    ></i>
+                </a>
+
+                <a
+                    href="#contact"
+                    class="mobile-nav-link group flex items-center justify-between px-5 py-4 rounded-xl hover:bg-blue-light/50 transition-all duration-300"
+                >
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-blue-light flex items-center justify-center group-hover:bg-blue-primary transition-colors"
+                        >
+                            <i
+                                class="fas fa-envelope text-blue-primary group-hover:text-white transition-colors"
+                            ></i>
+                        </div>
+                        <span
+                            class="font-bold text-gray-700 group-hover:text-blue-primary"
+                            >Contact</span
+                        >
+                    </div>
+                    <i
+                        class="fas fa-chevron-right text-gray-400 group-hover:text-blue-primary group-hover:translate-x-1 transition-all"
+                    ></i>
+                </a>
+
+                <div class="pt-4">
+                    <a
+                        href="#contact"
+                        class="flex items-center justify-center gap-2 w-full px-6 py-4 bg-blue-primary text-white font-bold rounded-xl shadow-lg shadow-blue-900/20 hover:bg-blue-secondary transition-all duration-300"
+                    >
+                        <span>Let's Work Together</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            {/* Mobile Menu Footer */}
+            <div
+                class="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200"
+            >
+                <div class="flex justify-center gap-4">
+                    <a
+                        href="#"
+                        class="w-10 h-10 rounded-lg bg-blue-light hover:bg-blue-primary flex items-center justify-center transition-colors group"
+                    >
+                        <i
+                            class="fab fa-github text-blue-primary group-hover:text-white transition-colors"
+                        ></i>
+                    </a>
+                    <a
+                        href="#"
+                        class="w-10 h-10 rounded-lg bg-blue-light hover:bg-blue-primary flex items-center justify-center transition-colors group"
+                    >
+                        <i
+                            class="fab fa-linkedin text-blue-primary group-hover:text-white transition-colors"
+                        ></i>
+                    </a>
+                    <a
+                        href="#"
+                        class="w-10 h-10 rounded-lg bg-blue-light hover:bg-blue-primary flex items-center justify-center transition-colors group"
+                    >
+                        <i
+                            class="fab fa-twitter text-blue-primary group-hover:text-white transition-colors"
+                        ></i>
+                    </a>
+                    <a
+                        href="#"
+                        class="w-10 h-10 rounded-lg bg-blue-light hover:bg-blue-primary flex items-center justify-center transition-colors group"
+                    >
+                        <i
+                            class="fab fa-instagram text-blue-primary group-hover:text-white transition-colors"
+                        ></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {/* Mobile Menu Overlay */}
+        <div
+            id="mobile-menu-overlay"
+            class="fixed inset-0 bg-dark/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden z-[55]"
+        >
+        </div>
+    </nav>
+</header>
+
+<style>
+    /* Navbar scroll effect */
+    #navbar {
+        will-change: transform, padding;
+    }
+
+    .navbar-scrolled #nav-container,
+    .navbar-scrolled #lang-container {
+        @apply shadow-xl shadow-blue-primary/10;
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .navbar-scrolled #nav-container {
+        @apply py-2 px-3;
+    }
+
+    @supports (backdrop-filter: blur(1px)) {
+        .navbar-scrolled #nav-container,
+        .navbar-scrolled #lang-container {
+            backdrop-filter: blur(10px);
+        }
+        /* Reduce blur on mobile for performance */
+        @media (max-width: 768px) {
+            .navbar-scrolled #nav-container,
+            .navbar-scrolled #lang-container {
+                backdrop-filter: blur(5px);
+                background-color: rgba(255, 255, 255, 0.98);
+            }
+        }
+    }
+
+    /* Active link indicator */
+    .nav-link.active {
+        @apply text-blue-primary bg-blue-light/50;
+    }
+
+    /* Mobile menu animations */
+    .mobile-menu-open {
+        @apply translate-x-0;
+    }
+
+    .overlay-visible {
+        @apply opacity-100 pointer-events-auto;
+    }
+
+    /* Hamburger animation */
+    #mobile-menu-button.active .hamburger-line:nth-child(1) {
+        @apply rotate-45 translate-y-2;
+    }
+
+    #mobile-menu-button.active .hamburger-line:nth-child(2) {
+        @apply opacity-0;
+    }
+
+    #mobile-menu-button.active .hamburger-line:nth-child(3) {
+        @apply -rotate-45 -translate-y-2;
+    }
+
+    /* Language Switcher Styles */
+    .lang-btn.active,
+    .lang-btn-mobile.active {
+        @apply bg-blue-primary text-white shadow-sm;
+    }
+
+    .lang-btn:not(.active),
+    .lang-btn-mobile:not(.active) {
+        @apply text-gray-400 hover:text-blue-primary;
+    }
+</style>
+
+<script lang="ts">
+    // Navbar scroll effect - Optimized with requestAnimationFrame
+    const navbar = document.getElementById("navbar");
+    let ticking = false;
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (window.pageYOffset > 50) {
+                        navbar?.classList.add("navbar-scrolled");
+                    } else {
+                        navbar?.classList.remove("navbar-scrolled");
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        },
+        { passive: true },
+    );
+
+    // Mobile menu logic
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuClose = document.getElementById("mobile-menu-close");
+    const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+    const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+    function openMobileMenu() {
+        mobileMenu?.classList.add("mobile-menu-open");
+        mobileMenuOverlay?.classList.add("overlay-visible");
+        mobileMenuButton?.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeMobileMenu() {
+        mobileMenu?.classList.remove("mobile-menu-open");
+        mobileMenuOverlay?.classList.remove("overlay-visible");
+        mobileMenuButton?.classList.remove("active");
+        document.body.style.overflow = "";
+    }
+
+    mobileMenuButton?.addEventListener("click", () => {
+        if (mobileMenu?.classList.contains("mobile-menu-open")) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    });
+
+    mobileMenuClose?.addEventListener("click", closeMobileMenu);
+    mobileMenuOverlay?.addEventListener("click", closeMobileMenu);
+
+    mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+    });
+
+    // Active link on scroll - Optimized with IntersectionObserver
+    const navLinks = document.querySelectorAll(".nav-link");
+    const observerOptions = {
+        root: null,
+        rootMargin: "-20% 0px -70% 0px",
+        threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute("id");
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${id}`) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll("section[id]").forEach((section) => {
+        observer.observe(section);
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const href = this.getAttribute("href");
+            if (!href || href === "#") return;
+
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }
+        });
+    });
+
+    // Language Switching Logic - Custom Dictionary (Clean & Instant)
+    const langBtns = document.querySelectorAll(".lang-btn, .lang-btn-mobile");
+
+    // Translation Dictionary
+    const translations = {
+        en: {
+            "nav.home": "Home",
+            "nav.about": "About",
+            "nav.projects": "Projects",
+            "nav.skills": "Skills",
+            "nav.contact": "Contact",
+            "nav.hire": "Hire Me",
+            "about.story":
+                "The <span class='text-blue-primary'>Story</span> Behind",
+            "about.desc":
+                "Blending engineering precision with creative vision to build the next generation of digital experiences.",
+            "about.title":
+                "Engineering <span class='text-blue-primary'>Purpose-Driven</span> Technology",
+            "about.p1":
+                "With a solid foundation in both frontend and backend systems, I bridge the gap between complex technical requirements and elegant user interfaces. My approach is rooted in the belief that software should not only be functional but also a joy to use.",
+            "about.p2":
+                "I don't just write code; I architect solutions that scale, perform, and solve real-world problems for users across the globe.",
+            "projects.title":
+                "Featured <span class='text-blue-primary'>Projects</span>",
+            "projects.desc":
+                "Explore my latest work showcasing modern web development and professional design solutions.",
+            "projects.kostapp.desc":
+                "A property sales integration app built with Laravel for boarding houses, apartments, and hotels in collaboration with PT Multi Raksa Tribata",
+            "projects.edufo.desc":
+                "A CRM for educational application orders with multi-label support",
+            "projects.siakad.desc":
+                "A comprehensive academic system with 4 pillars: Tracer Study, Internship, Inventory, and Jobseeker for SMK Nurul Islam Jakarta",
+            "projects.kasis.desc":
+                "A multiplatform app (Windows, Android, Web) for cash management and violation tracking built with Flutter and Laravel",
+            "projects.more": "View All Projects",
+            "contact.title":
+                "Let's craft <br />something <span class='text-accent underline decoration-green-primary/40 underline-offset-8'>epic</span>",
+            "contact.desc":
+                "I’m currently available for new projects and professional consulting. Reach out today!",
+            "contact.form.title": "Send a Message",
+            "contact.form.subtitle": "I usually respond within 2 hours.",
+            "contact.name": "Full Name",
+            "contact.email": "Email",
+            "contact.msg": "Your Message",
+            "contact.btn": "Shoot Message",
+            "hero.status": "Available for new projects",
+            "hero.role": "Fullstack <span class='text-black'>Engineer</span>",
+            "hero.desc":
+                "I architect high-performance digital solutions by bridging the gap between innovative design and scalable engineering.",
+            "hero.portfolio": "View Portfolio",
+            "hero.cv": "Download CV",
+            "hero.stats.projects": "Projects",
+            "hero.stats.exp": "Years Exp",
+            "hero.stats.satisfaction": "Satisfaction",
+            "hero.stats.support": "Support",
+            "hero.tech": "Tech Stack",
+            "hero.scroll": "Scroll Down",
+            "about.tabs.skills": "Skills",
+            "about.tabs.experience": "Experience",
+            "about.tabs.education": "Education",
+            "about.exp.1.role": "Fullstack Engineer",
+            "about.exp.2.role": "AI Annotator",
+            "about.exp.3.role": "Junior Developer",
+            "about.edu.1.degree": "Software Engineering",
+            "about.edu.1.school": "SMK Nurul Islam Jakarta",
+            "about.edu.2.degree": "Gamelab Certification",
+        },
+        id: {
+            "nav.home": "Beranda",
+            "nav.about": "Tentang",
+            "nav.projects": "Proyek",
+            "nav.skills": "Keahlian",
+            "nav.contact": "Kontak",
+            "nav.hire": "Rekrut Saya",
+            "about.story":
+                "Sebuah <span class='text-blue-primary'>Cerita</span> Di Balik Layar",
+            "about.desc":
+                "Menggabungkan presisi teknik dengan visi kreatif untuk membangun pengalaman digital masa depan.",
+            "about.title":
+                "Membangun Teknologi <span class='text-blue-primary'>Berbasis Tujuan</span>",
+            "about.p1":
+                "Dengan fondasi kuat dalam sistem frontend dan backend, saya menjembatani kesenjangan antara kebutuhan teknis yang kompleks dan antarmuka pengguna yang elegan. Pendekatan saya berakar pada keyakinan bahwa perangkat lunak tidak hanya harus fungsional tetapi juga menyenangkan untuk digunakan.",
+            "about.p2":
+                "Saya tidak sekadar menulis kode; saya merancang solusi yang berskala, berkinerja tinggi, dan memecahkan masalah nyata bagi pengguna di seluruh dunia.",
+            "projects.title":
+                "<span class='text-blue-primary'>Proyek</span> Unggulan",
+            "projects.desc":
+                "Jelajahi karya terbaru saya yang menampilkan pengembangan web modern dan solusi desain profesional.",
+            "projects.kostapp.desc":
+                "Sebuah Apps berbasis app full system integration dengan laravel khusus penjualan property (Kost Apartement atau hotel) yang bekerja sama dengan PT Multi Raksa Tribata",
+            "projects.edufo.desc":
+                "Sebuah CRM untuk pemesanan Aplikasi pendidikan dengan model label",
+            "projects.siakad.desc":
+                "Sistem akademik lengkap dengan 4 pilar: Siakad Tracer Study, Siakad PKL, Siakad Inventaris dan Siakad Jobseeker untuk SMK Nurul Islam Jakarta",
+            "projects.kasis.desc":
+                "Aplikasi Multiplatform (Windows, Android dan Web) pencatatan Manajemen kas dan pelanggaran bekerja sama dengan OSIS SMK Nurul Islam Jakarta",
+            "projects.more": "Lihat Semua Proyek",
+            "contact.title":
+                "Mari ciptakan <br />sesuatu yang <span class='text-accent underline decoration-green-primary/40 underline-offset-8'>epik</span>",
+            "contact.desc":
+                "Saat ini saya tersedia untuk proyek baru dan konsultasi profesional. Hubungi saya hari ini!",
+            "contact.form.title": "Kirim Pesan",
+            "contact.form.subtitle": "Biasanya membalas dalam 2 jam.",
+            "contact.name": "Nama Lengkap",
+            "contact.email": "Alamat Email",
+            "contact.msg": "Pesan Anda",
+            "contact.btn": "Kirim Pesan",
+            "hero.status": "Tersedia untuk proyek baru",
+            "hero.role": "Fullstack <span class='text-black'>Engineer</span>",
+            "hero.desc":
+                "Saya merancang solusi digital berkinerja tinggi dengan menjembatani kesenjangan antara desain inovatif dan struktur teknik yang skalabel.",
+            "hero.portfolio": "Lihat Portofolio",
+            "hero.cv": "Unduh CV",
+            "hero.stats.projects": "Proyek",
+            "hero.stats.exp": "Tahun Pengalaman",
+            "hero.stats.satisfaction": "Kepuasan",
+            "hero.stats.support": "Dukungan",
+            "hero.tech": "Teknologi",
+            "hero.scroll": "Gulir ke Bawah",
+            "about.tabs.skills": "Keahlian",
+            "about.tabs.experience": "Pengalaman",
+            "about.tabs.education": "Pendidikan",
+            "about.exp.1.role": "Fullstack Engineer",
+            "about.exp.2.role": "AI Annotator",
+            "about.exp.3.role": "Pengembang Junior",
+            "about.edu.1.degree": "Rekayasa Perangkat Lunak",
+            "about.edu.1.school": "SMK Nurul Islam Jakarta",
+            "about.edu.2.degree": "Sertifikasi Gamelab",
+        },
+    };
+
+    function updateContent(lang) {
+        const data = translations[lang];
+        if (!data) return;
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+            const key = el.getAttribute("data-i18n");
+            // If key found, update HTML (to support bold/span tags)
+            if (data[key]) {
+                el.innerHTML = data[key];
+            }
+        });
+
+        // Update placeholders
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+            const key = el.getAttribute("data-i18n-placeholder");
+            if (data[key]) {
+                el.placeholder = data[key];
+            }
+        });
+    }
+
+    function setLanguage(lang) {
+        // Update UI logic
+        langBtns.forEach((btn) => {
+            if (btn.getAttribute("data-lang") === lang) {
+                btn.classList.add("active");
+            } else {
+                btn.classList.remove("active");
+            }
+        });
+
+        // Apply translations instantly (No reload needed!)
+        updateContent(lang);
+    }
+
+    // Initialize - Always default to English on refresh
+    setLanguage("en");
+
+    // Listeners
+    langBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const lang = btn.getAttribute("data-lang");
+            if (lang) {
+                setLanguage(lang);
+            }
+        });
+    });
+</script>

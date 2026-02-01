@@ -1,0 +1,409 @@
+<section id="about" class="py-24 bg-white relative overflow-hidden notranslate">
+  {/* Modern Decorative Accents */}
+  <div
+    class="absolute top-0 left-0 w-64 h-64 bg-blue-primary/5 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 right-0 w-96 h-96 bg-green-primary/5 rounded-full blur-[120px] translate-x-1/3 translate-y-1/3"
+  >
+  </div>
+
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-20 relative">
+      <h2
+        class="text-4xl md:text-6xl font-black mb-6 tracking-tight text-dark"
+        data-i18n="about.story"
+      >
+        The <span class="text-blue-primary">Story</span> Behind
+      </h2>
+      <p
+        class="text-gray-text max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
+        data-i18n="about.desc"
+      >
+        Blending engineering precision with creative vision to build the next
+        generation of digital experiences.
+      </p>
+      <div class="w-16 h-1.5 bg-green-primary/40 mx-auto mt-8 rounded-full">
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      {/* Left Column: Deep Narrative Section */}
+      <div class="animate-fade-in-up">
+        <div class="relative p-1 space-y-8">
+          <div class="space-y-6">
+            <h3
+              class="text-3xl font-black text-dark tracking-tight leading-tight"
+              data-i18n="about.title"
+            >
+              Engineering <span class="text-blue-primary">Purpose-Driven</span> Technology
+            </h3>
+            <p
+              class="text-gray-text text-lg leading-relaxed"
+              data-i18n="about.p1"
+            >
+              With a solid foundation in both frontend and backend systems, I
+              bridge the gap between complex technical requirements and elegant
+              user interfaces. My approach is rooted in the belief that software
+              should not only be functional but also a joy to use.
+            </p>
+            <p
+              class="text-gray-text text-lg leading-relaxed"
+              data-i18n="about.p2"
+            >
+              I don't just write code; I architect solutions that scale,
+              perform, and solve real-world problems for users across the globe.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            {
+              [
+                {
+                  icon: "fa-bullseye",
+                  label: "Strategy",
+                  color: "text-blue-primary",
+                },
+                {
+                  icon: "fa-lightbulb",
+                  label: "Innovation",
+                  color: "text-green-primary",
+                },
+                {
+                  icon: "fa-rocket",
+                  label: "Delivery",
+                  color: "text-blue-secondary",
+                },
+              ].map((item) => (
+                <div class="p-6 bg-blue-light rounded-[2rem] border border-blue-50 hover:shadow-lg transition-all duration-500 group">
+                  <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                    <i class={`fas ${item.icon} ${item.color}`} />
+                  </div>
+                  <p class="font-black text-dark text-sm uppercase tracking-widest">
+                    {item.label}
+                  </p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+
+      {/* Right Column: Interactive Tabs (Skills, Experience, Education) */}
+      <div class="animate-fade-in-up" style="animation-delay: 0.2s">
+        <div
+          class="bg-dark rounded-[3rem] p-8 lg:p-12 shadow-2xl shadow-blue-900/40 relative overflow-hidden group h-full flex flex-col"
+        >
+          {/* Subtle Glow */}
+          <div
+            class="absolute -top-24 -right-24 w-64 h-64 bg-blue-primary/20 rounded-full blur-[80px] group-hover:bg-blue-primary/30 transition-all duration-1000"
+          >
+          </div>
+
+          {/* Tab Navigation */}
+          <div
+            class="flex p-1 bg-white/5 backdrop-blur-sm rounded-2xl mb-8 border border-white/10 relative z-10"
+          >
+            <button
+              class="tab-btn flex-1 py-3 rounded-xl text-sm font-bold text-white/60 hover:text-white transition-all duration-300 relative active"
+              data-tab="skills"
+            >
+              <span class="relative z-10" data-i18n="about.tabs.skills"
+                >Skills</span
+              >
+              <div
+                class="tab-indicator absolute inset-0 bg-blue-primary rounded-xl opacity-0 transition-opacity duration-300 -z-0"
+              >
+              </div>
+            </button>
+            <button
+              class="tab-btn flex-1 py-3 rounded-xl text-sm font-bold text-white/60 hover:text-white transition-all duration-300 relative"
+              data-tab="experience"
+            >
+              <span class="relative z-10" data-i18n="about.tabs.experience"
+                >Experience</span
+              >
+              <div
+                class="tab-indicator absolute inset-0 bg-blue-primary rounded-xl opacity-0 transition-opacity duration-300 -z-0"
+              >
+              </div>
+            </button>
+            <button
+              class="tab-btn flex-1 py-3 rounded-xl text-sm font-bold text-white/60 hover:text-white transition-all duration-300 relative"
+              data-tab="education"
+            >
+              <span class="relative z-10" data-i18n="about.tabs.education"
+                >Education</span
+              >
+              <div
+                class="tab-indicator absolute inset-0 bg-blue-primary rounded-xl opacity-0 transition-opacity duration-300 -z-0"
+              >
+              </div>
+            </button>
+          </div>
+
+          {/* Tab Content Area */}
+          <div class="relative z-10 flex-1">
+            {/* 1. Skills Content */}
+            <div
+              id="tab-skills"
+              class="tab-content block space-y-8 animate-fade-in"
+            >
+              <div class="space-y-6">
+                {
+                  [
+                    {
+                      label: "Systems Architecture",
+                      value: 95,
+                      color: "bg-blue-primary",
+                    },
+                    {
+                      label: "Modern Frontend",
+                      value: 92,
+                      color: "bg-green-primary",
+                    },
+                    {
+                      label: "Backend Resilience",
+                      value: 88,
+                      color: "bg-blue-primary",
+                    },
+                    {
+                      label: "Design Systems",
+                      value: 90,
+                      color: "bg-green-secondary",
+                    },
+                  ].map((skill) => (
+                    <div class="space-y-2">
+                      <div class="flex justify-between items-end">
+                        <span class="text-white/80 font-bold text-sm uppercase tracking-widest">
+                          {skill.label}
+                        </span>
+                        <span class="text-white font-black text-xs">
+                          {skill.value}%
+                        </span>
+                      </div>
+                      <div class="h-2 w-full bg-white/10 rounded-full overflow-hidden">
+                        <div
+                          class={`h-full ${skill.color} rounded-full transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(34,211,238,0.2)]`}
+                          style={`width: ${skill.value}%`}
+                        />
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+
+              {/* Extra Skills Tags */}
+              <div class="flex flex-wrap gap-2 pt-4 border-t border-white/10">
+                {
+                  [
+                    "React",
+                    "Vue",
+                    "Astro",
+                    "Node.js",
+                    "Go",
+                    "Docker",
+                    "AWS",
+                    "Figma",
+                  ].map((tag) => (
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs text-blue-200 font-mono">
+                      {tag}
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
+
+            {/* 2. Experience Content */}
+            <div
+              id="tab-experience"
+              class="tab-content hidden space-y-6 animate-fade-in"
+            >
+              <div class="relative border-l border-white/10 ml-3 space-y-8">
+                {/* Item 1 */}
+                <div class="relative pl-8 group">
+                  <span
+                    class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-blue-primary group-hover:scale-150 group-hover:shadow-[0_0_10px_#3b82f6] transition-all duration-300"
+                  ></span>
+                  <div class="flex flex-col">
+                    <span class="text-xs font-mono text-green-primary mb-1"
+                      >2025 - Present</span
+                    >
+                    <h4
+                      class="text-white font-bold text-lg leading-tight"
+                      data-i18n="about.exp.1.role"
+                    >
+                      Fullstack Engineer
+                    </h4>
+                    <p class="text-white/60 text-sm font-medium">Genion Team</p>
+                  </div>
+                </div>
+                {/* Item 2 */}
+                <div class="relative pl-8 group">
+                  <span
+                    class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-white/20 group-hover:bg-blue-primary group-hover:scale-150 transition-all duration-300"
+                  ></span>
+                  <div class="flex flex-col">
+                    <span class="text-xs font-mono text-white/40 mb-1"
+                      >2024</span
+                    >
+                    <h4
+                      class="text-white font-bold text-lg leading-tight"
+                      data-i18n="about.exp.2.role"
+                    >
+                      AI Annotator
+                    </h4>
+                    <p class="text-white/60 text-sm font-medium">
+                      PT. Bosnet Distribution Indonesia
+                    </p>
+                  </div>
+                </div>
+                {/* Item 3 */}
+                <div class="relative pl-8 group">
+                  <span
+                    class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-white/20 group-hover:bg-blue-primary group-hover:scale-150 transition-all duration-300"
+                  ></span>
+                  <div class="flex flex-col">
+                    <span class="text-xs font-mono text-white/40 mb-1"
+                      >2022 - 2023</span
+                    >
+                    <h4
+                      class="text-white font-bold text-lg leading-tight"
+                      data-i18n="about.exp.3.role"
+                    >
+                      Junior Developer
+                    </h4>
+                    <p class="text-white/60 text-sm font-medium">Freelancer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 3. Education Content */}
+            <div
+              id="tab-education"
+              class="tab-content hidden space-y-6 animate-fade-in"
+            >
+              <div class="space-y-4">
+                {/* Edu 1 */}
+                <div
+                  class="bg-white/5 border border-white/5 rounded-2xl p-4 hover:bg-white/10 transition-colors"
+                >
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-blue-primary/20 flex items-center justify-center text-blue-primary shrink-0"
+                    >
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                      <span
+                        class="text-xs font-mono text-green-primary block mb-1"
+                        >2023 - 2026</span
+                      >
+                      <h4
+                        class="text-white font-bold text-base leading-tight"
+                        data-i18n="about.edu.1.degree"
+                      >
+                        Software Engineering
+                      </h4>
+                      <p
+                        class="text-white/60 text-xs mt-1"
+                        data-i18n="about.edu.1.school"
+                      >
+                        SMK Nurul Islam Jakarta
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Edu 2 */}
+                <div
+                  class="bg-white/5 border border-white/5 rounded-2xl p-4 hover:bg-white/10 transition-colors"
+                >
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white/60 shrink-0"
+                    >
+                      <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                      <span class="text-xs font-mono text-white/40 block mb-1"
+                        >2023</span
+                      >
+                      <h4
+                        class="text-white font-bold text-base leading-tight"
+                        data-i18n="about.edu.2.degree"
+                      >
+                        Gamelab Certification
+                      </h4>
+                      <p class="text-white/60 text-xs mt-1">
+                        Gamelab Indonesia
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/10">
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-3 text-white font-bold group/btn text-sm hover:text-blue-primary transition-colors"
+            >
+              <span class="relative">
+                <span data-i18n="hero.portfolio">View Portfolio</span>
+                <span
+                  class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-primary group-hover/btn:w-full transition-all duration-500"
+                ></span>
+              </span>
+              <i
+                class="fas fa-arrow-right text-xs transform group-hover/btn:translate-x-1 transition-transform"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Simple Tab Logic
+  const tabs = document.querySelectorAll(".tab-btn");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = tab.getAttribute("data-tab");
+
+      // Update Tabs
+      tabs.forEach((t) => {
+        t.classList.remove("active");
+        t.querySelector(".tab-indicator")?.classList.remove("opacity-100");
+        t.querySelector(".tab-indicator")?.classList.add("opacity-0");
+        t.classList.add("text-white/60");
+        t.classList.remove("text-white");
+      });
+
+      tab.classList.add("active");
+      tab.classList.remove("text-white/60");
+      tab.classList.add("text-white");
+      tab.querySelector(".tab-indicator")?.classList.add("opacity-100");
+      tab.querySelector(".tab-indicator")?.classList.remove("opacity-0");
+
+      // Update Content
+      contents.forEach((c) => {
+        c.classList.add("hidden");
+        c.classList.remove("block");
+      });
+
+      const activeContent = document.getElementById(`tab-${target}`);
+      if (activeContent) {
+        activeContent.classList.remove("hidden");
+        activeContent.classList.add("block");
+      }
+    });
+  });
+</script>

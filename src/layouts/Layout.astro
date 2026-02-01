@@ -1,23 +1,386 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import Header from "../components/Header.astro";
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {Astro.props.title} | Nafil Habibi Mulyadi - Fullstack Engineer
+    </title>
+
+    <!-- Primary Meta Tags -->
+    <meta
+      name="title"
+      content={`${Astro.props.title} | Nafil Habibi Mulyadi - Fullstack Engineer`}
+    />
+    <meta
+      name="description"
+      content="Portfolio of Nafil Habibi Mulyadi, a Fullstack Engineer specializing in high-performance digital solutions, web apps, and mobile development with Laravel, Python, and Flutter."
+    />
+    <meta name="author" content="Nafil Habibi Mulyadi" />
+    <meta
+      name="keywords"
+      content="Nafil Habibi, Fullstack Engineer, Web Developer, Laravel Expert, Flutter Developer, SMK Nurul Islam Jakarta, KostApp, Kasis App, Edufo CRM"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nafilhabibi.vercel.app/" />
+    <!-- Replace with actual domain -->
+    <meta
+      property="og:title"
+      content={`${Astro.props.title} | Nafil Habibi Mulyadi - Fullstack Engineer`}
+    />
+    <meta
+      property="og:description"
+      content="Architecting high-performance digital solutions with innovative design and scalable engineering."
+    />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://nafilhabibi.vercel.app/" />
+    <meta
+      property="twitter:title"
+      content={`${Astro.props.title} | Nafil Habibi Mulyadi - Fullstack Engineer`}
+    />
+    <meta
+      property="twitter:description"
+      content="Architecting high-performance digital solutions with innovative design and scalable engineering."
+    />
+    <meta property="twitter:image" content="/og-image.jpg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+
+  <body
+    class="font-inter text-gray-text bg-light min-h-screen overflow-x-hidden"
+  >
+    <Header />
+
+    <!-- Main Content -->
+    <main class="relative">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-white border-t border-gray-200 mt-20">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-8"
+        >
+          <!-- Brand -->
+          <div class="text-center md:text-left">
+            <h3
+              class="text-xl font-bold bg-gradient-to-r from-blue-primary to-blue-secondary bg-clip-text text-transparent"
+            >
+              Nafil Habibi Mulyadi
+            </h3>
+            <p class="text-gray-500 mt-2 text-sm">
+              Creative Developer & Designer
+            </p>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex gap-6">
+            <a
+              href="https://www.linkedin.com/in/nafilhabibi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-blue-primary transition-colors duration-300 hover:scale-110 transform"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+            <a
+              href="https://github.com/nafilhabibi"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-gray-800 transition-colors duration-300 hover:scale-110 transform"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform"
+              aria-label="Twitter"
+            >
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/nafiliator_"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-pink-500 transition-colors duration-300 hover:scale-110 transform"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+
+          <!-- Copyright -->
+          <p class="text-gray-400 text-sm text-center md:text-right">
+            © {new Date().getFullYear()} All rights reserved.
+          </p>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="mt-8 pt-8 border-t border-gray-100 text-center">
+          <p class="text-gray-500 text-sm">
+            Made by Nafil Habibi Mulyadi <i
+              class="fas fa-copyright text-red-400 mx-1"></i> and with lots of tea
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="backToTop"
+      class="fixed bottom-8 right-8 w-12 h-12 bg-blue-primary text-white rounded-full shadow-lg hover:shadow-xl hover:bg-blue-secondary transition-all duration-300 transform translate-y-20 opacity-0 z-50"
+      aria-label="Back to top"
+    >
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script lang="ts">
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+
+          // Skip if it's just "#"
+          if (href === "#") return;
+
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Navbar scroll effect
+      const header = document.querySelector("header");
+      if (header) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 100) {
+            header.classList.add(
+              "bg-white/90",
+              "backdrop-blur-md",
+              "shadow-sm",
+              "border-b",
+              "border-gray-100",
+            );
+          } else {
+            header.classList.remove(
+              "bg-white/90",
+              "backdrop-blur-md",
+              "shadow-sm",
+              "border-b",
+              "border-gray-100",
+            );
+          }
+        });
+      }
+
+      // Back to Top Button
+      const backToTopBtn = document.getElementById("backToTop");
+      if (backToTopBtn) {
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            backToTopBtn.classList.remove("translate-y-20", "opacity-0");
+            backToTopBtn.classList.add("translate-y-0", "opacity-100");
+          } else {
+            backToTopBtn.classList.remove("translate-y-0", "opacity-100");
+            backToTopBtn.classList.add("translate-y-20", "opacity-0");
+          }
+        });
+
+        backToTopBtn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      // Intersection Observer for fade-in animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-in-up");
+            observer.unobserve(entry.target); // Stop observing after animation
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements with animation class
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".animate-on-scroll").forEach((element) => {
+          observer.observe(element);
+        });
+      });
+
+      // Add animation class to sections by default
+      document.querySelectorAll("section").forEach((section) => {
+        if (!section.classList.contains("no-animate")) {
+          section.classList.add("animate-on-scroll");
+        }
+      });
+    </script>
+
+    <!-- Global Styles -->
+    <style>
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
+        }
+      }
+
+      /* Utility Classes */
+      .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .animate-gradient-shift {
+        background-size: 200% 200%;
+        animation: gradientShift 5s ease infinite;
+      }
+
+      .animate-pulse-glow {
+        animation: pulse-glow 2s ease-in-out infinite;
+      }
+
+      /* Gradient Text */
+      .gradient-text {
+        background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradientShift 5s ease infinite;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(to bottom, #2563eb, #7c3aed);
+      }
+
+      /* Selection Color */
+      ::selection {
+        background-color: rgba(59, 130, 246, 0.3);
+        color: #1f2937;
+      }
+
+      /* Focus Styles */
+      :focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+
+      :focus:not(:focus-visible) {
+        outline: none;
+      }
+
+      /* Print Styles */
+      @media print {
+        header,
+        footer,
+        #backToTop {
+          display: none !important;
+        }
+
+        body {
+          font-size: 12pt;
+          line-height: 1.5;
+        }
+      }
+    </style>
+  </body>
+</html>
