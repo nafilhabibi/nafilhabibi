@@ -38,7 +38,7 @@
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=YOUR_USERNAME&theme=tokyonight&hide_border=true"/>
+<img src="https://streak-stats.demolab.com?user=nafilhabibi&theme=tokyonight&hide_border=true"/>
 
 </div>
 
@@ -48,7 +48,7 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-contribution-grid-snake-dark.svg"/>
+<img src="https://raw.githubusercontent.com/nafilhabibi/nafilhabibi/output/github-contribution-grid-snake-dark.svg"/>
 
 </div>
 
@@ -56,6 +56,6 @@
 
 <div align="center">
 
-<img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&style=for-the-badge&color=red"/>
+<img src="https://komarev.com/ghpvc/?username=nafilhabibi&style=for-the-badge&color=red"/>
 
 </div>
